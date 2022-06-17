@@ -1,12 +1,14 @@
 pluggins = {
-    "wbthomason/packer.nvim", -- Packer can manage itself
-    "nvim-lua/plenary.nvim" , -- Dependecy for neogit,telescope 
-    "TimUntersberger/neogit", -- Git 
-    "mbbill/undotree",        -- UndoTree
+    "wbthomason/packer.nvim",
+    "nvim-lua/plenary.nvim" ,
+    --Git
+    "TimUntersberger/neogit", 
+    -- UndoTree
+    "mbbill/undotree",       
 }
 
 return require("packer").startup(function()
- for key,val in pairs(pluggins) do
+ for _,val in pairs(pluggins) do
     use(val)
  end
 end)
